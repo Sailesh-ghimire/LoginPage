@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import WelcomePage from './pages/WelcomePage';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ThemeProvider } from './context/ThemeContext';
+import NotFoundPage from './components/NotFoundPage';
+import RouteGuard from './components/RouteGuard';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route
+            path='/login'
+            element={<RouteGuard element={<LoginPage />} isLoginRoute={true} />}
+          />
+          <Route
+            path='/'
+            element={
+              <RouteGuard element={<WelcomePage />} isLoginRoute={false} />
+            }
+          />
+          <Route
+            path='*'
+            element={
+              <RouteGuard element={<NotFoundPage />} isLoginRoute={false} />
+            }
+          />
+        </Routes>
+        <ToastContainer />
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

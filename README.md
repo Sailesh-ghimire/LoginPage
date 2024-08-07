@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a modern React application with TypeScript, Tailwind CSS, and Zod for validation. The project includes authentication features, dark/light mode support, and responsive design. It demonstrates skills in frontend development with a focus on clean, stylish, and functional UI components.
 
-## Available Scripts
+# Features
 
-In the project directory, you can run:
+1. Authentication: Login functionality with token-based authentication.
+2. Theming: Support for dark and light modes.
+3. Responsive Design: Modern UI components that work well on various screen sizes.
+4. Validation: Form validation using Zod.
+5. Notifications: Toast notifications for user feedback.
+6. Routing: Protected routes and redirection based on authentication status.
 
-### `npm start`
+# Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Node.js and npm installed on your machine.
+2. Basic knowledge of React, TypeScript, and Tailwind CSS.
 
-### `npm test`
+# Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   -->git clone https://github.com/yourusername/your-repo-name.git
+2. cd your-repo-name
+3. npm install
 
-### `npm run build`
+# Running the Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To start the development server and view the application:
+--> npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Configuration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Theme: The application supports dark and light modes. The default theme is dark mode. You can toggle between themes using the button provided in the UI.
 
-### `npm run eject`
+# API Endpoints
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Login: POST https://login.dataconstruct.com.np - Authenticates a user and returns a token.
+2. Routes
+   /login: Login page.
+   /: Main page after successful login.
+   \*: NotFoundPage for undefined routes.
