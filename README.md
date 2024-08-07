@@ -21,7 +21,7 @@ This is a modern React application with TypeScript, Tailwind CSS, and Zod for va
 # Installation
 
 1. Clone the repository:
-   -->git clone https://github.com/yourusername/your-repo-name.git
+   -->git clone https://github.com/Sailesh-ghimire/LoginPage.git
 2. cd your-repo-name
 3. npm install
 
